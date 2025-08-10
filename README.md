@@ -9,6 +9,7 @@ This project uses:
 2. **Vision Transformer (ViT)** classifier to determine:
    - `hairnet`
    - `no_hairnet`
+   - `cannot_predict`
 
 The system is trained on a custom dataset cropped person images, labeled in YOLO format, and optimized for deployment in real-time monitoring systems.
 
@@ -16,7 +17,7 @@ The system is trained on a custom dataset cropped person images, labeled in YOLO
 - **Two-stage detection:**  
   First stage detects persons; second stage classifies cropped images.
 - **Custom dataset training:**  
-  YOLO format labels with classes `[hairnet, no_hairnet]`.
+  YOLO format labels with classes `[hairnet, no_hairnet,cannot_predict]`.
 - **From-scratch ViT training:**  
   Uses cropped detections as input, without relying on pretrained weights.
 - **Confidence scores** for each classification.
